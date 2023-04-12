@@ -126,7 +126,7 @@ const EditPost = () => {
           src={`${
             typeof fileData === "object"
               ? URL.createObjectURL(fileData)
-              : `http://localhost:3000/${fileData}`
+              : `${process.env.BACKEND_URL}/${fileData}`
           }`}
           alt={title}
           className="w-56"

@@ -10,7 +10,7 @@ const Post = ({ title, content, author, createdAt, img, _id }) => {
         onClick={() => navigate(`/post/${_id}`)}
       >
         <img
-          src={`http://localhost:3000/${img}`}
+          src={`${process.env.BACKEND_URL}/${img}`}
           alt={title}
           className="rounded object-cover w-full"
         />

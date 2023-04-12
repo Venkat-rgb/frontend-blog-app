@@ -97,7 +97,7 @@ const FullPost = () => {
       </div>
       <div className="h-[350px]">
         <img
-          src={`http://localhost:3000/${post?.img}`}
+          src={`${process.env.BACKEND_URL}/${post?.img}`}
           alt={post?.title}
           className="w-full h-full object-center object-cover rounded"
         />
