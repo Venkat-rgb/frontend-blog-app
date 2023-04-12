@@ -1,5 +1,6 @@
 import moment from "moment";
 import { useNavigate } from "react-router-dom";
+import { BACKEND_URL } from "../config";
 
 const Post = ({ title, content, author, createdAt, img, _id }) => {
   const navigate = useNavigate();
@@ -10,7 +11,7 @@ const Post = ({ title, content, author, createdAt, img, _id }) => {
         onClick={() => navigate(`/post/${_id}`)}
       >
         <img
-          src={`${process.env.BACKEND_URL}/${img}`}
+          src={`${BACKEND_URL}/${img}`}
           alt={title}
           className="rounded object-cover w-full"
         />

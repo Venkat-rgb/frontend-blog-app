@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
-import { POST_API_URL } from "../config";
+import { BACKEND_URL, POST_API_URL } from "../config";
 import toast from "react-hot-toast";
 import moment from "moment";
 
@@ -97,7 +97,7 @@ const FullPost = () => {
       </div>
       <div className="h-[350px]">
         <img
-          src={`${process.env.BACKEND_URL}/${post?.img}`}
+          src={`${BACKEND_URL}/${post?.img}`}
           alt={post?.title}
           className="w-full h-full object-center object-cover rounded"
         />

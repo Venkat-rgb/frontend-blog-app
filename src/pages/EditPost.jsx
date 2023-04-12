@@ -4,7 +4,7 @@ import "react-quill/dist/quill.snow.css";
 import AuthContext from "../context/AuthContext";
 import { useNavigate, useParams } from "react-router-dom";
 import toast from "react-hot-toast";
-import { POST_API_URL } from "../config";
+import { BACKEND_URL, POST_API_URL } from "../config";
 
 const modules = {
   toolbar: [
@@ -126,7 +126,7 @@ const EditPost = () => {
           src={`${
             typeof fileData === "object"
               ? URL.createObjectURL(fileData)
-              : `${process.env.BACKEND_URL}/${fileData}`
+              : `${BACKEND_URL}/${fileData}`
           }`}
           alt={title}
           className="w-56"
