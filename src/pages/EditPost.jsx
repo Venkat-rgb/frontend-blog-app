@@ -77,7 +77,7 @@ const EditPost = () => {
     formData.set("title", title);
     typeof fileData === "object" && formData.set("img", fileData);
     formData.set("content", content);
-    formData.set("id", user?.userInfo && user.userInfo.id);
+    formData.set("id", userId);
 
     try {
       if (catchError.trim())
