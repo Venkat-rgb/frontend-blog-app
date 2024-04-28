@@ -66,7 +66,7 @@ const App = () => {
   // max-w-[1000px] mx-auto
 
   return (
-    <main className="bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-neutral-700 to-neutral-900">
+    <main className="h-screen bg-neutral-200/70">
       <Header />
       <div className="max-w-[1000px] mx-auto">
         <Routes>

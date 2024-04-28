@@ -61,7 +61,7 @@ const FullPost = () => {
   }, []);
 
   return (
-    <div className="my-5 space-y-3 px-2">
+    <div className="my-9 space-y-4 p-4 font-inter bg-white rounded-md h-[80vh] overflow-y-scroll max-[500px]:mx-2.5">
       <div className="flex flex-col items-center space-y-2">
         <p
           className="text-2xl font-bold"

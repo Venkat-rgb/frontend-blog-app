@@ -109,44 +109,48 @@ const EditPost = () => {
   };
 
   return (
-    <form
-      className="flex flex-col w-full gap-4 my-6 px-2"
-      onSubmit={submitHandler}
-      encType="multipart/form-data"
-    >
-      <input
-        type="text"
-        placeholder="Title"
-        className="border border-gray-300 p-2 outline-none w-full"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-      />
-      {fileData && (
-        <img
-          src={`${
-            typeof fileData === "object"
-              ? URL.createObjectURL(fileData)
-              : `${BACKEND_URL}/${fileData}`
-          }`}
-          alt={title}
-          className="w-56"
-        />
-      )}
-      <input type="file" onChange={(e) => setFileData(e.target.files[0])} />
-      <ReactQuill
-        theme="snow"
-        value={content}
-        onChange={setContent}
-        modules={modules}
-        formats={formats}
-      />
-      <button
-        type="submit"
-        className="w-full bg-[#333] p-2 rounded text-[#f1f1f1]"
+    <div className="font-inter my-10 h-[80vh] overflow-y-scroll pr-2 bg-white rounded pt-3 max-[500px]:mx-2.5">
+      <p className="text-center text-2xl font-semibold">Edit Post</p>
+
+      <form
+        className="flex flex-col w-full gap-4 my-6 p-3 bg-white rounded-md"
+        onSubmit={submitHandler}
+        encType="multipart/form-data"
       >
-        Edit Post
-      </button>
-    </form>
+        <input
+          type="text"
+          placeholder="Title"
+          className="border border-gray-300 p-2 outline-none w-full rounded"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+        {fileData && (
+          <img
+            src={`${
+              typeof fileData === "object"
+                ? URL.createObjectURL(fileData)
+                : `${BACKEND_URL}/${fileData}`
+            }`}
+            alt={title}
+            className="w-56 h-56 object-cover rounded-md"
+          />
+        )}
+        <input type="file" onChange={(e) => setFileData(e.target.files[0])} />
+        <ReactQuill
+          theme="snow"
+          value={content}
+          onChange={setContent}
+          modules={modules}
+          formats={formats}
+        />
+        <button
+          type="submit"
+          className="w-full bg-[#333] p-2 rounded text-[#f1f1f1]"
+        >
+          Edit Post
+        </button>
+      </form>
+    </div>
   );
 };
 

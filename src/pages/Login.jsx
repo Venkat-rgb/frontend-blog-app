@@ -50,7 +50,7 @@ const Login = () => {
 
   return (
     <Layout>
-      <div className="w-[350px] bg-white border border-gray-300 p-4 space-y-3">
+      <div className="w-[350px] bg-white border border-gray-300 p-4 space-y-3 rounded-md shadow-xl font-inter">
         <h1 className="text-2xl font-semibold text-center">Login</h1>
         <form
           onSubmit={submitHandler}
@@ -59,14 +59,14 @@ const Login = () => {
           <input
             type="email"
             placeholder="Enter your Email..."
-            className="border border-gray-300 p-2 outline-none w-full"
+            className="border border-gray-300 p-2 outline-none w-full rounded"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
           />
           <input
             type="password"
             placeholder="Enter your Password..."
-            className="border border-gray-300 p-2 outline-none w-full"
+            className="border border-gray-300 p-2 outline-none w-full rounded"
             onChange={(e) => setPassword(e.target.value)}
             value={password}
           />

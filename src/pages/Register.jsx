@@ -55,7 +55,7 @@ const Register = () => {
 
   return (
     <Layout>
-      <div className="w-[350px] bg-white border border-gray-300 p-4 space-y-3">
+      <div className="w-[350px] bg-white border border-gray-300 p-4 space-y-3 rounded-md shadow-xl font-inter">
         <p className="text-2xl font-semibold text-center">Register</p>
         <form
           onSubmit={submitHandler}
@@ -64,21 +64,21 @@ const Register = () => {
           <input
             type="text"
             placeholder="Enter your Username..."
-            className="border border-gray-300 p-2 outline-none w-full"
+            className="border border-gray-300 p-2 outline-none w-full rounded"
             onChange={(e) => setUsername(e.target.value)}
             value={username}
           />
           <input
             type="email"
             placeholder="Enter your Email..."
-            className="border border-gray-300 p-2 outline-none w-full"
+            className="border border-gray-300 p-2 outline-none w-full rounded"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
           />
           <input
             type="password"
             placeholder="Enter your Password..."
-            className="border border-gray-300 p-2 outline-none w-full"
+            className="border border-gray-300 p-2 outline-none w-full rounded"
             onChange={(e) => setPassword(e.target.value)}
             value={password}
           />
